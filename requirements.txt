@@ -1,4 +1,4 @@
-discord.py
+discord
 bs4
 requests
 pandas
