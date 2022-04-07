@@ -1,5 +1,4 @@
 discord.py
-Bot
-BeautifulSoup
+bs4
 requests
 pandas
