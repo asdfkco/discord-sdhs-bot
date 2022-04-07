@@ -3,7 +3,6 @@ from discord.ext.commands import Bot
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-import os
 
 intents = discord.Intents.default()
 bot = Bot(command_prefix='!', intents=intents)
