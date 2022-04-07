@@ -3,6 +3,7 @@ from discord.ext.commands import Bot
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+import os
 
 intents = discord.Intents.default()
 bot = Bot(command_prefix='!', intents=intents)
@@ -40,4 +41,4 @@ async def on_message(message):
         embed = discord.Embed(title="서울디지텍고등학교 시간표",description="**```"+str(time_chart).replace("           ","")+"```**")
         await message.channel.send(embed=embed)
 
-bot.run("OTU5MDE1MzY5NzQ4NjQ3OTk2.YkVuqQ.pjCWO2nFjPNcJx_dOnePVYD1Jjo")
+bot.run(os.environ['token'])
