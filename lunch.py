@@ -7,7 +7,7 @@ import pandas as pd
 intents = discord.Intents.default()
 bot = Bot(command_prefix='!', intents=intents)
 
-token = open("token", "r").readline()
+token = open("token.txt", "r").readline()
 
 raw_data = requests.get("https://sdh.sen.hs.kr/index.do")
 
