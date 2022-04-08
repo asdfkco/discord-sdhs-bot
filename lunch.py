@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext.commands import Bot
 from bs4 import BeautifulSoup
 import requests
@@ -7,7 +8,7 @@ import pandas as pd
 intents = discord.Intents.default()
 bot = Bot(command_prefix='!', intents=intents)
 
-token = open("token.txt", "r").readline()
+TOKEN = os.environ.get('BOT_TOKEN')
 
 raw_data = requests.get("https://sdh.sen.hs.kr/index.do")
 
@@ -44,4 +45,4 @@ async def on_message(message):
                               str(time_chart).replace("           ", "")+"```**")
         await message.channel.send(embed=embed)
 
-bot.run(token)
+bot.run(TOKEN)
