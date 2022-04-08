@@ -36,7 +36,7 @@ time_chart = pd.DataFrame(
 
 @bot.event
 async def on_message(message):
-    if message.content == "!오늘 급식" or message.content == "!오늘급식" or message.content == "!급식" or message.content == "!급식 확인" or message.content == "!":
+    if message.content == "!오늘 급식" or message.content == "!오늘급식" or message.content == "!급식" or message.content == "!급식 확인" or message.content == "!급식확인":
         embed = discord.Embed(title="서울디지텍고등학교 급식", description="**```" + str(lunch.text).replace("급식 전체보기", '').replace(
             "\n", '').replace("\t", '').replace(" ", "") + "```**", color=0x62c1cc)  # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
         await message.channel.send(embed=embed)  # embed를 포함 한 채로 메시지를 전송합니다.
